@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install buildah as not available by default on ubuntu-slim
-        run: sudo apt install -y buildah
+        run: sudo apt update && sudo apt install -y buildah
         
 
       - name: Generate tags
