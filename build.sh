@@ -2,7 +2,7 @@
 set -euox pipefail
 
 
-sudo tee /etc/yum.repos.d/netbird.repo <<EOF
+tee /etc/yum.repos.d/netbird.repo <<EOF
 [netbird]
 name=netbird
 baseurl=https://pkgs.netbird.io/yum/
