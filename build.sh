@@ -12,5 +12,6 @@ gpgkey=https://pkgs.netbird.io/yum/repodata/repomd.xml.key
 repo_gpgcheck=1
 EOF
 
-dnf5 -y install @cosmic-desktop @cosmic-desktop-apps netbird-ui
+dnf5 -y install @cosmic-desktop @cosmic-desktop-apps
+rpm-ostree install netbird-ui
 dnf5 clean all
