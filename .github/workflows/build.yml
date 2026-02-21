@@ -37,8 +37,9 @@ jobs:
       - name: Checkout Push to Registry action
         uses: actions/checkout@v4
 
-      #- name: Maximize build space
-      #  uses: ublue-os/remove-unwanted-software@v9
+      - name: Install buildah as not available by default on ubuntu-slim
+        run: sudo apt install -y buildah
+        
 
       - name: Generate tags
         id: generate-tags
