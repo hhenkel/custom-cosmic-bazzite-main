@@ -25,7 +25,7 @@ concurrency:
 jobs:
   build_push:
     name: Build and push image
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
 
     permissions:
       contents: read
@@ -35,11 +35,7 @@ jobs:
     steps:
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
-        uses: actions/checkout@v4
-
-      - name: Install buildah as not available by default on ubuntu-slim
-        run: sudo apt update && sudo apt install -y buildah
-        
+        uses: actions/checkout@v6
 
       - name: Generate tags
         id: generate-tags
